@@ -30,7 +30,7 @@ function onFormSubmit(event) {
   event.preventDefault();
   refs.buttonLoad.classList.add('ishidden');
 
-  searchName = event.currentTarget.elements.searchQuery.value.trim();
+  searchName = event.currentTarget.elements.searchBox.value.trim();
   if (searchName === 0) {
     return;
   } else {
@@ -47,9 +47,9 @@ function onLoadMoreBtn() {
   fetchRequest(searchName, currentPage);
 }
 
-async function fetchRequest(searchQuery, currentPage) {
+async function fetchRequest(searchBox, currentPage) {
   try {
-    const fetchResult = await fetchPictures(searchQuery, currentPage);
+    const fetchResult = await fetchPictures(searchBox, currentPage);
     if (currentPage === 1) {
       Notiflix.Notify.info(`Hooray! We found ${fetchResult.totalHits} images.`);
     }
