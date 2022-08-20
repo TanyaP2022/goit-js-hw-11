@@ -30,7 +30,9 @@ function onFormSubmit(event) {
   event.preventDefault();
   refs.buttonLoad.classList.add('ishidden');
 
-  searchName = event.currentTarget.elements.searchBox.value.trim();
+  searchName = event.currentTarget.elements.searchBox.value
+    .trim()
+    .toUpperCase();
   if (searchName === 0) {
     return;
   } else {
