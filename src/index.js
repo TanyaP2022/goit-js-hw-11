@@ -30,7 +30,7 @@ refs.btnLoadMoreEl.addEventListener('click', onClickBtnLodeMore);
 function onSubmitForm(event) {
   event.preventDefault();
   refs.btnLoadMoreEl.classList.add('hide');
-  const searchName = event.currentTarget.elements.searchQuery.value
+  const searchName = event.currentTarget.elements.searchBox.value
     .trim()
     .toUpperCase();
   clearGalleryList();
@@ -42,9 +42,9 @@ function onClickBtnLodeMore() {
   const searchName = refs.inputEl.value.trim().toUpperCase();
   convertFetchResults(searchName, currentPage);
 }
-async function convertFetchResults(searchQuery, currentPage) {
+async function convertFetchResults(searchBox, currentPage) {
   try {
-    const fetchResult = await fetchPictures(searchQuery, currentPage);
+    const fetchResult = await fetchPictures(searchBox, currentPage);
     if (currentPage === 1) {
       Notify.info(`Hooray! We found ${fetchResult.totalHits} images.`);
     }
