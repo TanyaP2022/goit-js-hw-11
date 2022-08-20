@@ -30,12 +30,12 @@ refs.btnLoadMoreEl.addEventListener('click', onClickBtnLodeMore);
 function onSubmitForm(event) {
   event.preventDefault();
   refs.btnLoadMoreEl.classList.add('hide');
-  const searchName = event.currentTarget.elements.searchBox.value
+  const searchBox = event.currentTarget.elements.searchBox.value
     .trim()
     .toUpperCase();
   clearGalleryList();
   currentPage = 1;
-  convertFetchResults(searchName, currentPage);
+  convertFetchResults(searchBox, currentPage);
 }
 function onClickBtnLodeMore() {
   currentPage += 1;
