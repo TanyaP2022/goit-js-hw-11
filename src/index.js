@@ -70,7 +70,7 @@ function onSubmitForm(event) {
     .trim()
     .toUpperCase();
   clearGalleryList();
-  convertFetchResults(searchName, currentPage);
+  convertFetchResults(searchName);
   resetPage();
 }
 function onClickBtnLodeMore() {
@@ -115,5 +115,5 @@ function clearGalleryList() {
   refs.galleryEl.innerHTML = '';
 }
 function resetPage() {
-  page.value = 1;
+  page = 1;
 }
