@@ -58,6 +58,9 @@ input {
 .img-link {
   display: block;
 }
-.invisible {
+.hide {
   display: none;
+}
+img {
+  width: 100%;
 }
