@@ -69,9 +69,8 @@ function onSubmitForm(event) {
     .trim()
     .toUpperCase();
   clearGalleryList();
-  resetPage();
-
   convertFetchResults(searchName, currentPage);
+  resetPage();
 }
 function onClickBtnLodeMore() {
   currentPage += 1;
@@ -113,4 +112,7 @@ function filterFetchResult(fetchResult) {
 }
 function clearGalleryList() {
   refs.galleryEl.innerHTML = '';
+}
+function resetPage() {
+  page = 1;
 }
