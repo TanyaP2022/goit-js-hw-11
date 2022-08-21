@@ -66,6 +66,7 @@ function onSubmitForm(event) {
   refs.btnLoadMoreEl.classList.add('hide');
 
   const searchName = event.currentTarget.elements.searchQuery.value
+
     .trim()
     .toUpperCase();
   clearGalleryList();
@@ -114,5 +115,5 @@ function clearGalleryList() {
   refs.galleryEl.innerHTML = '';
 }
 function resetPage() {
-  currentPage.value = 1;
+  page.value = 1;
 }
