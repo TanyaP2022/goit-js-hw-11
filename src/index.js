@@ -64,14 +64,13 @@ function smoothScrollToBottomPage() {
 function onSubmitForm(event) {
   event.preventDefault();
   refs.btnLoadMoreEl.classList.add('hide');
-
   const searchName = event.currentTarget.elements.searchQuery.value
-
     .trim()
     .toUpperCase();
   clearGalleryList();
-  convertFetchResults(searchName, currentPage);
+  // currentPage = 1;
   resetPage();
+  convertFetchResults(searchName, currentPage);
 }
 function onClickBtnLodeMore() {
   currentPage += 1;
