@@ -21,8 +21,6 @@ refs.buttonLoad.addEventListener('click', onLoadMoreBtn);
 let isAlertVisible = false;
 let nameSearch = refs.input.value;
 let lightbox;
-let currentPage = 1;
-let perPage = 40;
 const totalPages = 500 / perPage;
 console.log(totalPages);
 
