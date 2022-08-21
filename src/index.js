@@ -21,7 +21,7 @@ refs.buttonLoad.addEventListener('click', onLoadMoreBtn);
 let isAlertVisible = false;
 let nameSearch = refs.input.value;
 let lightbox;
-const totalPages = 500 / perPage;
+const totalPages = 500;
 console.log(totalPages);
 
 refs.buttonLoad.classList.add('invisible');
