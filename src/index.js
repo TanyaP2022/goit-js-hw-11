@@ -77,8 +77,8 @@ function onSubmitForm(event) {
   const searchName = event.currentTarget.elements.searchQuery.value
     .trim()
     .toUpperCase();
-  // currentPage = 1;
-  resetPage();
+  currentPage = 1;
+  // resetPage();
   clearGalleryList();
   convertFetchResults(searchName, currentPage);
 }
