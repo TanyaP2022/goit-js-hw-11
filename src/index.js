@@ -73,7 +73,7 @@ function smoothScrollToBottomPage() {
 // }
 function onSubmitForm(event) {
   event.preventDefault();
-  searchName.query = event.currentTarget.elements.searchQuery.value;
+  searchName = event.currentTarget.elements.searchQuery.value;
   searchName.resetPage();
   currentPage = 0;
   clearGalleryList();
