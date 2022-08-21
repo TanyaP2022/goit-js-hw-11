@@ -22,6 +22,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionPosition: 'bottom',
   captionDelay: 250,
 });
+let currentPage = 1;
 
 refs.formEl.addEventListener('submit', onSubmitForm);
 refs.btnLoadMoreEl.addEventListener('click', onClickBtnLodeMore);
@@ -69,7 +70,6 @@ function onSubmitForm(event) {
     .trim()
     .toUpperCase();
   clearGalleryList();
-  let currentPage = 1;
   convertFetchResults(searchName, currentPage);
 }
 function onClickBtnLodeMore() {
