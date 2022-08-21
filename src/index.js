@@ -35,13 +35,13 @@ function createOneAnimal(picture) {
     <img src="${picture.webformatURL}" alt="${picture.tags}" title="${picture.tags}" loading="lazy"/></a></div>
     <div class="info">
       <p class="info-item">
-        <b>Likes: <br> ${picture.likes}</b></p>
+        <b>Likes: <span class="info-span"> ${picture.likes}</span></b></p>
       <p class="info-item">
-        <b>Views: <br> ${picture.views}</b></p>
+        <b>Views: <span class="info-span"> ${picture.views}</span></b></p>
       <p class="info-item">
-        <b>Comments: <br> ${picture.comments}</b></p>
+        <b>Comments: <span class="info-span"> ${picture.comments}</span></b></p>
       <p class="info-item">
-        <b>Downloads: <br> ${picture.downloads}</b></p>
+        <b>Downloads: <span class="info-span"> ${picture.downloads}</span></b></p>
     </div>
     </div>`;
 }
