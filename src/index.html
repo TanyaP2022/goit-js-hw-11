@@ -9,25 +9,20 @@
   <body>
     <form class="search-form" id="search-form">
       <input
-        class="input"
         type="text"
         name="searchQuery"
         autocomplete="off"
         placeholder="Search images..."
       />
-      <button class="search" type="submit">Search</button>
+      <button type="submit" class="btn-submit">Search</button>
     </form>
-
+    <p class="total-hits"></p>
     <div class="gallery">
-      <!-- Карточки изображений -->
+      <!-- Картки зображень -->
     </div>
-
-    <button type="button" class="load-more">Load more</button>
-
-    <div class="alert no-more-pages">
-      We're sorry, but you've reached the end of search results.
+    <div class="wrapper-btn">
+      <button type="button" class="load-more">Load more</button>
     </div>
-
     <script src="index.js" type="module"></script>
   </body>
 </html>
