@@ -73,7 +73,9 @@ function smoothScrollToBottomPage() {
 // }
 function onSubmitForm(event) {
   event.preventDefault();
-  searchName = event.currentTarget.elements.searchQuery.value;
+  const searchName = event.currentTarget.elements.searchQuery.value
+    .trim()
+    .toUpperCase();
   searchName.resetPage();
   currentPage = 0;
   clearGalleryList();
