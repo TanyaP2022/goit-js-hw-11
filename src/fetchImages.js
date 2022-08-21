@@ -5,14 +5,12 @@ import axios from 'axios';
 const BASE_URL = 'https://pixabay.com/api/';
 const perPages = 40;
 const key = '29404582-ff8d29a0dc81dbac31eded24e';
-let currentPage = 1;
-let perPage = 40;
 let nameSearch = refs.input.value;
 
 async function fetchImages() {
   try {
     const response = await axios.get(
-      `${BASE_URL}?=${key}&q=${nameSearch}&page=${currentPage}&per_page=${perPage}`
+      `${BASE_URL}?=${key}&q=${nameSearch}&image_type=photo&orientation=horizontal&safesearch=true&per_page=${perPages}&page=${page}`
     );
     const arrayImages = await response.data.hits;
 

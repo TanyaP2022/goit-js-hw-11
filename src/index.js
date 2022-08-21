@@ -20,6 +20,8 @@ refs.buttonLoad.addEventListener('click', onLoadMoreBtn);
 
 let isAlertVisible = false;
 let lightbox;
+let currentPage = 1;
+
 const totalPages = 500;
 console.log(totalPages);
 
