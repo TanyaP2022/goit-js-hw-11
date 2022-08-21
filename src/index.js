@@ -54,10 +54,10 @@ function insertCreatedAnimals(array) {
 
 function smoothScrollToBottomPage() {
   const galleryRect = refs.galleryEl.getBoundingClientRect();
-  window.scrollBy({
-    top: galleryRect.height,
-    behavior: 'smooth',
-  });
+  // window.scrollBy({
+  //   top: galleryRect.height,
+  //   behavior: 'smooth',
+  // });
 }
 
 function onSubmitForm(event) {
@@ -67,6 +67,7 @@ function onSubmitForm(event) {
     .trim()
     .toUpperCase();
   clearGalleryList();
+  let currentPage = 1;
   convertFetchResults(searchName, currentPage);
 }
 function onClickBtnLodeMore() {
