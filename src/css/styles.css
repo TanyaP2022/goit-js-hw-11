@@ -28,7 +28,7 @@ body {
   margin-right: auto;
 }
 .photo-card {
-  width: 370px;
+  width: calc(100% / 3);
   margin-right: 10px;
 }
 .wrapper-btn {
