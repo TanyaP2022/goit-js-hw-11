@@ -52,13 +52,13 @@ function insertCreatedAnimals(array) {
   refs.galleryEl.insertAdjacentHTML('beforeend', result);
 }
 
-// function smoothScrollToBottomPage() {
-//   const galleryRect = refs.galleryEl.getBoundingClientRect();
-// window.scrollBy({
-//   top: galleryRect.height,
-//   behavior: 'smooth',
-// });
-// }
+function smoothScrollToBottomPage() {
+  const galleryRect = refs.galleryEl.getBoundingClientRect();
+  // window.scrollBy({
+  //   top: galleryRect.height,
+  //   behavior: 'smooth',
+  // });
+}
 
 function onSubmitForm(event) {
   event.preventDefault();
