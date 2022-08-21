@@ -67,7 +67,6 @@ function onSubmitForm(event) {
     .trim()
     .toUpperCase();
   clearGalleryList();
-  currentPage = 1;
   convertFetchResults(searchName, currentPage);
 }
 function onClickBtnLodeMore() {
