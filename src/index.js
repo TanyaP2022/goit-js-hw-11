@@ -17,8 +17,8 @@ const refs = {
 let currentPage = 1;
 refs.btnLoadMoreEl.classList.add('hide');
 const lightbox = new SimpleLightbox('.gallery a', {
-  captions: true,
-  captionSelector: 'img',
+  // captions: true,
+  // captionSelector: 'img',
   captionsData: 'alt',
   captionPosition: 'bottom',
   captionDelay: 250,
