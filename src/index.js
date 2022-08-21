@@ -14,7 +14,6 @@ const refs = {
   totalHitsEl: document.querySelector('.total-hits'),
 };
 
-let currentPage = 1;
 refs.btnLoadMoreEl.classList.add('hide');
 const lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
@@ -112,30 +111,3 @@ function filterFetchResult(fetchResult) {
 function clearGalleryList() {
   refs.galleryEl.innerHTML = '';
 }
-// безкінечний скрол
-export const moveScrolle = throttle(() => {
-  if (gallery.children.length != 0) {
-    const seeLastElement = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          const currentEntry = entry.target;
-          if (!entry.isIntersecting) {
-            return;
-          } else if (gallery.children.length >= response.data.totalHits) {
-            Notify.info(
-              `We're sorry, but you've reached the end of search results.`
-            );
-            seeLastElement.unobserve(currentEntry);
-          } else {
-            page += 1;
-            getUser();
-            seeLastElement.unobserve(currentEntry);
-          }
-        });
-      },
-      { threshold: 0.25, root: null, rootMargin: '0px' }
-    );
-
-    seeLastElement.observe(document.querySelector('.grid-item:last-child'));
-  }
-}, 300);
