@@ -70,7 +70,7 @@ function onSubmitForm(event) {
     .trim()
     .toUpperCase();
   clearGalleryList();
-  convertFetchResults(searchName);
+  convertFetchResults(searchName, currentPage);
   resetPage();
 }
 function onClickBtnLodeMore() {
