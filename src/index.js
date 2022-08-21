@@ -19,7 +19,6 @@ refs.form.addEventListener('submit', onFormSubmit);
 refs.buttonLoad.addEventListener('click', onLoadMoreBtn);
 
 let isAlertVisible = false;
-let nameSearch = refs.input.value;
 let lightbox;
 const totalPages = 500;
 console.log(totalPages);

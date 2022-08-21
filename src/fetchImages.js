@@ -7,6 +7,7 @@ const perPages = 40;
 const key = '29404582-ff8d29a0dc81dbac31eded24e';
 let currentPage = 1;
 let perPage = 40;
+let nameSearch = refs.input.value;
 
 async function fetchImages() {
   try {
