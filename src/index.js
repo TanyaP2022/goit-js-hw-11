@@ -63,6 +63,7 @@ function smoothScrollToBottomPage() {
 
 function onSubmitForm(event) {
   event.preventDefault();
+  const page = 1;
   refs.btnLoadMoreEl.classList.add('hide');
   const searchName = event.currentTarget.elements.searchQuery.value
     .trim()
