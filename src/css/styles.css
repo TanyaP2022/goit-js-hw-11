@@ -12,9 +12,50 @@ body {
   line-height: 1.5;
 }
 
-#search-box {
-  font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
+.search-form {
+  display: flex;
+  justify-content: center;
+  background-color: #2d83aa;
+  height: 50px;
+  padding: 10px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.photo-card {
+  width: 370px;
+  margin-right: 10px;
+}
+.wrapper-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.load-more {
+  background-color: #2d83aa;
+  border: none;
+  height: 30px;
+  border-radius: 10px;
+}
+input {
+  border: 0px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+.btn-submit {
+  border-radius: 10px;
+  border: 0px;
+}
+.img-thumb {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 5px;
+}
+.img-link {
+  display: block;
 }
