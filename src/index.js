@@ -81,7 +81,7 @@ function onSubmitForm(event) {
     .trim()
     .toUpperCase();
   // searchName.resetPage();
-  currentPage = resetPage();
+  resetPage();
   clearGalleryList();
   convertFetchResults(searchName, currentPage);
 }
