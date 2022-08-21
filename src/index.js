@@ -55,8 +55,8 @@ function insertCreatedAnimals(array) {
 function smoothScrollToBottomPage() {
   const galleryRect = refs.galleryEl.getBoundingClientRect();
   window.scrollBy({
-    top: 0,
-    // top: galleryRect.height,
+    // top: 0,
+    top: galleryRect.height,
 
     behavior: 'smooth',
   });
