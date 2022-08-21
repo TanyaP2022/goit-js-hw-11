@@ -114,5 +114,5 @@ function clearGalleryList() {
   refs.galleryEl.innerHTML = '';
 }
 function resetPage() {
-  page = 1;
+  this.page = 1;
 }
