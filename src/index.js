@@ -61,17 +61,25 @@ function smoothScrollToBottomPage() {
   });
 }
 
+// function onSubmitForm(event) {
+//   event.preventDefault();
+//   refs.btnLoadMoreEl.classList.add('hide');
+//   const searchName = event.currentTarget.elements.searchQuery.value
+//     .trim()
+//     .toUpperCase();
+//   clearGalleryList();
+//   currentPage = 1;
+//   convertFetchResults(searchName, currentPage);
+// }
 function onSubmitForm(event) {
   event.preventDefault();
-  refs.btnLoadMoreEl.classList.add('hide');
-  const searchName = event.currentTarget.elements.searchQuery.value
-    .trim()
-    .toUpperCase();
+  searchName.query = event.currentTarget.elements.searchQuery.value;
+  searchName.resetPage();
+  currentPage = 0;
   clearGalleryList();
-  // currentPage = 1;
-  resetPage();
   convertFetchResults(searchName, currentPage);
 }
+
 function onClickBtnLodeMore() {
   currentPage += 1;
   const searchName = refs.inputEl.value.trim().toUpperCase();
