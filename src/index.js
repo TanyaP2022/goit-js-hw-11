@@ -61,24 +61,12 @@ function smoothScrollToBottomPage() {
   });
 }
 
-// function onSubmitForm(event) {
-//   event.preventDefault();
-//   refs.btnLoadMoreEl.classList.add('hide');
-//   const searchName = event.currentTarget.elements.searchQuery.value
-//     .trim()
-//     .toUpperCase();
-//   clearGalleryList();
-//   currentPage = 1;
-//   convertFetchResults(searchName, currentPage);
-// }
-
 function onSubmitForm(event) {
   event.preventDefault();
   const searchName = event.currentTarget.elements.searchQuery.value
     .trim()
     .toUpperCase();
   currentPage = 1;
-  // resetPage();
   clearGalleryList();
   convertFetchResults(searchName, currentPage);
 }
