@@ -76,6 +76,7 @@ img {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 5px;
+  margin-left: 15px;
 }
 .info-item {
   color: #2b9bc0;
