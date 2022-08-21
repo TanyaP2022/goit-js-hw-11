@@ -71,16 +71,13 @@ function smoothScrollToBottomPage() {
 //   currentPage = 1;
 //   convertFetchResults(searchName, currentPage);
 // }
-function resetPage() {
-  response.page = 1;
-}
 
 function onSubmitForm(event) {
   event.preventDefault();
   const searchName = event.currentTarget.elements.searchQuery.value
     .trim()
     .toUpperCase();
-  // searchName.resetPage();
+  // currentPage = 1;
   resetPage();
   clearGalleryList();
   convertFetchResults(searchName, currentPage);

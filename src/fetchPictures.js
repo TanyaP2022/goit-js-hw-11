@@ -10,7 +10,9 @@ const fetchPictures = async (searchQuery, page) => {
   const response = await axios.get(
     `${BASE_URL}?key=${key}&q=${searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=${perPages}&page=${page}`
   );
-
+  function resetPage() {
+    response.page = 1;
+  }
   return response.data;
 };
 export default fetchPictures;
